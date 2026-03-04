@@ -1,13 +1,22 @@
 # Steam - Gaming Market Analysis
 Power BI project analyzing the PC gaming market using Steam games data from years 2010 - 2025.
 
-## Overview
-The dashboard focuses on game releases, popularity, pricing models, player engagement, user sentiment, playtime behavior, platforms, and publisher performance.
+## Project Purpose
+This dashboard is designed for exploratory analytics and gaming market insights using Power BI.
 
-It allows filtering by Release Year, Price, Genre, Estimated Owners, Positive/Negative Rating, Peak CCU, Average/Median Playtime, Platform, Publisher to explore different market segments.
+It provides a structured analytical view of the Steam gaming ecosystem, supporting:
+- Market structure exploration
+- Game popularity benchmarking
+- Pricing strategy evaluation
+- Player sentiment analysis
+- Engagement measurement
+- Platform distribution comparison
+- Developer performance analysis
+
+It allows to explore different market segments filtering by: Release Year, Price, Genre, Estimated Owners, Positive/Negative Rating, Peak CCU, Average/Median Playtime, Platform, Publisher.
 
 ## Dataset
-Fields used in the dashboard:
+CSV database, fields used in the dashboard:
 - Name
 - Release date
 - Estimated owners (range)
@@ -28,11 +37,11 @@ Fields used in the dashboard:
 - Supported languages
 - Categories
 
-## DAX - Key Metrics Used
-
-- Total Games → COUNTROWS(games)
-- Avg Price → AVERAGE(games[Price])
-- Avg User Score:
+## DAX
+Key Metrics Used:
+- **Total Games** → COUNTROWS(games)
+- **Avg Price** → AVERAGE(games[Price])
+- **Avg User Score:**
 `Avg User Score =
 VAR Score =
     CALCULATE(
@@ -52,4 +61,24 @@ vs `Paid Games = CALCULATE(
     COUNTROWS(games),
     games[Price] > 0
 )`
-- Avg Playtime → AVERAGE(games[Average playtime forever])
+- **Avg Peak CCU by Platform:** `Avg Peak CCU Windows = CALCULATE(
+    AVERAGE(games[Peak CCU]),
+    games[Windows] = TRUE()
+)`
+- **Avg Playtime** → AVERAGE(games[Average playtime forever])
+
+## Dashboard Components
+The dashboard includes the following components:
+- **Month Filter**: Dropdown to select the analysis period.
+- **KPIs**:
+  - Total sales, orders, and quantity sold with month-over-month comparisons.
+- **Sales by Date**: Line chart showing daily sales trends with an average sales line.
+- **Sales by Week**: Donut chart showing the split between weekdays and weekends.
+- **Sales by Product Category**:
+  - Bar chart displaying sales across categories like coffee, tea, bakery, etc.
+- **Sales by Product Type**:
+  - Detailed breakdown of sales by specific product types.
+- **Sales by Store Location**:
+  - Comparison of sales across different store locations with month-over-month differences.
+- **Sales by Day and Hour**:
+  - Heatmap showing sales patterns across days of the week and hours of the day.
