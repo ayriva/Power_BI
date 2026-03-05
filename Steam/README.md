@@ -1,3 +1,5 @@
+[![Awesome](https://raw.githubusercontent.com/ayriva/ayriva.github.io/refs/heads/main/img/steam2.png)](https://github.com/ayriva/Power_BI/blob/main/Steam/steam_games.pdf)
+
 # Steam - Gaming Market Analysis
 Power BI project analyzing the PC gaming market using Steam games data from years 2010 - 2025.
 
