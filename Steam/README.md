@@ -69,18 +69,4 @@ vs `Paid Games = CALCULATE(
 )`
 - **Avg Playtime** → AVERAGE(games[Average playtime forever])
 
-## Dashboard Components
-The dashboard includes the following components:
-- **Month Filter**: Dropdown to select the analysis period.
-- **KPIs**:
-  - Total sales, orders, and quantity sold with month-over-month comparisons.
-- **Sales by Date**: Line chart showing daily sales trends with an average sales line.
-- **Sales by Week**: Donut chart showing the split between weekdays and weekends.
-- **Sales by Product Category**:
-  - Bar chart displaying sales across categories like coffee, tea, bakery, etc.
-- **Sales by Product Type**:
-  - Detailed breakdown of sales by specific product types.
-- **Sales by Store Location**:
-  - Comparison of sales across different store locations with month-over-month differences.
-- **Sales by Day and Hour**:
-  - Heatmap showing sales patterns across days of the week and hours of the day.
+
